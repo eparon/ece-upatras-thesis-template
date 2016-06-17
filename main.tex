@@ -1,0 +1,94 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper,11pt,twoside]{book}
+\usepackage{upatras-thesis}
+
+
+%
+% These commands need to be defined in order to produce a correct and personalized document
+%
+\newcommand{\shortdoctitle}{Διπλωματική Εργασία}
+\newcommand{\doctitle}{Τίτλος Εργασίας}
+\newcommand{\docsubtitle}{Υπότιτλος εγγράφου}
+\newcommand{\division}{Τομέας Φοιτητή}
+\newcommand{\lab}{Εργαστήριο Εκπόνησης της Εργασίας}
+
+\newcommand{\me}{Όνομα και Επώνυμο Φοιτητή}
+\newcommand{\studnum}{Μητρώο Φοιτητή}
+\newcommand{\keywords}{keyword1, keyword2,keyword3}
+\newcommand{\monthyear}{Μήνας 201X}
+
+%Be sure to use all the titles for your committee members!!! (their names show up on the very first page!)
+\newcommand{\supname}{Ονοματεπώνυμο Επιβλέποντα}
+\newcommand{\suptitle}{Βαθμίδα Επιβλέποντα}
+\newcommand{\headofdivision}{Ονοματεπώνυμο Διεθυντή Τομέα}
+\newcommand{\headofdivisiontitle}{Βαθμίδα Διευθυντή Τομέα}
+
+\author{\me}
+
+
+% PDF settings
+%
+\hypersetup
+{
+    pdfauthor={\me},
+    pdftitle={\shortdoctitle},
+    pdfsubject={\doctitle},
+    pdfkeywords={\keywords}
+}
+
+\begin{document}
+
+
+\pagenumbering{roman}
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{page}{3}
+
+\include{titlepage}
+
+\clearemptydoublepage
+
+\include{certification}
+
+\clearemptydoublepage
+
+\include{about}
+
+\clearemptydoublepage
+
+\include{chapters/summary}
+
+\clearemptydoublepage
+
+\include{chapters/acknowledgements}
+
+\clearemptydoublepage
+
+\pagestyle{fancy}
+
+\tableofcontents
+%\mainmatter % book mode only
+\clearemptydoublepage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{chapters/introduction.tex}
+\clearemptydoublepage
+
+\chapter{Οι θερμικές εικόνες}\label{ch:chap1}
+\input{chapters/chapter_1.tex}
+\clearemptydoublepage
+
+\chapter{Η ανάλυση}\label{ch:chap2}
+\input{chapters/chapter_2.tex}
+\clearemptydoublepage
+
+\chapter{Super Resolution μέσω Image Registration}\label{ch:chap3}
+\input{chapters/chapter_3.tex}
+\clearemptydoublepage
+
+\input{bibliography.tex}
+
+\end{document}

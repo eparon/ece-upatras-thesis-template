@@ -1,0 +1,59 @@
+\ProvidesPackage{upatras-thesis}
+
+%packages used
+\usepackage[top=4cm, bottom=4cm, left=4cm, right=4cm]{geometry}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{graphicx} 
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{algorithm2e}
+\usepackage{ulem}
+\usepackage{parskip} % κενό παραγράφων
+\usepackage{float}
+\usepackage{fixltx2e}
+\usepackage{xltxtra}
+\usepackage{gensymb}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{lmodern}
+\usepackage{fontspec}
+%\usepackage{mathspec}
+%\usepackage{unicode-math}
+\usepackage{xgreek}
+\usepackage{import}
+\usepackage{gfsdidot}
+\usepackage[Rejne]{fncychap}
+\usepackage{svg}
+\usepackage{hyperref}
+\usepackage{lettrine}
+\usepackage[nottoc]{tocbibind}
+\usepackage{bm}
+
+%\usepackage[T1]{fontenc}
+
+\setmainfont[Path=font/, Mapping=tex-text]{GFSDidot.otf}
+%\setmathfont{xits-math.otf}
+\setlength{\headheight}{15.2pt}
+\newlength\longest
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\renewcommand{\algorithmcfname}{Αλγόριθμος}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\newtheorem{theorem}{Θεώρημα}[section]
+
+\newcommand{\clearemptydoublepage}{
+    \newpage{\pagestyle{empty}
+    \cleardoublepage}
+}
+
+\graphicspath{{images/}}
+\setlength{\parindent}{1.5cm}
+\setlength{\parskip}{+0.25em}
