@@ -14,9 +14,12 @@
 \newcommand{\division}{Τομέας Φοιτητή}
 \newcommand{\lab}{Εργαστήριο Εκπόνησης της Εργασίας}
 
-\newcommand{\me}{Όνομα και Επώνυμο Φοιτητή}
+\newcommand{\me}{Όνομα, Επώνυμο και Πατρώνυμο Φοιτητή\\(σε γενική πτώση)} %ΠΡΟΣΟΧΗ: στοιχεία σε γενική πτώση. Παράδειγμα: Άγγελου Σικελιανού του Ιωάννη
+%
+\newcommand{\nomme}{Όνομα, Επώνυμο και Πατρώνυμο Φοιτητή\\(σε ονομαστική πτώση)} %ΠΡΟΣΟΧΗ: στοιχεία σε ονομαστική πτώση. Παράδειγμα: Άγγελος Σικελιανός του Ιωάννη
+%
 \newcommand{\studnum}{Μητρώο Φοιτητή}
-\newcommand{\keywords}{keyword1, keyword2,keyword3}
+\newcommand{\keywords}{keyword1, keyword2, keyword3}
 \newcommand{\monthyear}{Μήνας 201X}
 
 \newcommand{\supname}{Ονοματεπώνυμο Επιβλέποντα}
@@ -34,7 +37,9 @@
     pdfauthor={\me},
     pdftitle={\shortdoctitle},
     pdfsubject={\doctitle},
-    pdfkeywords={\keywords}
+    pdfkeywords={\keywords},
+    pdfproducer={XeLaTex},
+    pdfcreator={\creator}
 }
 
 \begin{document}
